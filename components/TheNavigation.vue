@@ -11,3 +11,17 @@ export default {
   name: 'Navigation'
 }
 </script>
+
+<style lang="scss" scoped>
+#nav {
+  a {
+    text-decoration: none;
+    display: inline-block;
+    padding: $space-s;
+
+    &:visited {
+      color: black;
+    }
+  }
+}
+</style>

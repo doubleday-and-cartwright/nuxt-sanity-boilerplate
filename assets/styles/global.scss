@@ -1,3 +1,7 @@
+/*
+  These global styles are imported in the layouts/default.vue, so they are applied everywhere.
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -8,4 +12,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $brand-color;
+}
+
+.container {
+  max-width: $site-max-width;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: $font-size-l;
+  padding: $space-l;
+  text-align: center;
 }

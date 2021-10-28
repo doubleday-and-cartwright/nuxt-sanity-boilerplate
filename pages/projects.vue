@@ -1,6 +1,6 @@
 <template>
   <div class="projects">
-    <h1>Our Work</h1>
+    <h1 class="page-title">Our Work</h1>
     <div
       v-for="(project, index) in projects"
       :key="`project-${index}`"
