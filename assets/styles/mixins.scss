@@ -3,3 +3,8 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin bg-cover-center {
+  background-size: cover;
+  background-position: center center;
+}

@@ -1,3 +1,7 @@
+<!--
+  Components that should appear globally (i.e. Site Navigation) should be placed here.
+  Note that it also imports the global.scss file to apply global styling.
+-->
 <template>
   <div class="site-content">
     <TheNavigation />

@@ -1,8 +1,14 @@
 <template>
   <div id="nav">
-    <NuxtLink to="/">Home</NuxtLink>
-    <NuxtLink to="/about">About</NuxtLink>
-    <NuxtLink to="/projects">Projects</NuxtLink>
+    <NuxtLink to="/">
+      Home
+    </NuxtLink>
+    <NuxtLink to="/about">
+      About
+    </NuxtLink>
+    <NuxtLink to="/projects">
+      Projects
+    </NuxtLink>
   </div>
 </template>
 
@@ -12,6 +18,7 @@ export default {
 }
 </script>
 
+<!-- Styling that is specific to a component should be placed in a scoped <style> tag within the component. -->
 <style lang="scss" scoped>
 #nav {
   a {

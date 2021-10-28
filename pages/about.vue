@@ -1,7 +1,6 @@
 <template>
   <div class="about">
     <h1 class="page-title">About our company</h1>
-    <h2>Our Employees</h2>
   </div>
 </template>
 
