@@ -6,7 +6,7 @@ export const state = () => ({
 
 export const actions = {
   /**
-   * This is a built in Nuxt action that is called on load.
+   * This is a built-in Nuxt action that is called on load.
    * In this case, it's used to get any global data required throughout the site.
    * This might include global site navigation or the site footer.
    */

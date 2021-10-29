@@ -27,7 +27,7 @@ export default {
     padding: $space-s;
 
     &:visited {
-      color: black;
+      color: $font-color;
     }
   }
 }

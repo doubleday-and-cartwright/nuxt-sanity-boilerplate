@@ -1,3 +1,7 @@
+/*
+  This file is used to structure the layout of the Sanity CMS.
+*/
+
 import S from '@sanity/desk-tool/structure-builder'
 
 export default () =>
@@ -28,6 +32,7 @@ export default () =>
                 )
             ])
         ),
+      // Load all other items not specifically listed
       ...S.documentTypeListItems().filter(listItem => ![
         // Filter redundant desk items here
         'settingsGeneral',

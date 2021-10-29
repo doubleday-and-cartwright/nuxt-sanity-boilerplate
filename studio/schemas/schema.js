@@ -4,9 +4,9 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Documents
-import pageAbout from './documents/pageAbout'
 import settingsGeneral from './documents/settingsGeneral'
 import settingsFooter from './documents/settingsFooter'
+import page from './documents/page'
 import project from './documents/project'
 // Objects
 import seo from './objects/seo'
@@ -17,9 +17,9 @@ export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
     /* Add new types here */
-    pageAbout,
     settingsGeneral,
     settingsFooter,
+    page,
     project,
     seo
   ]),

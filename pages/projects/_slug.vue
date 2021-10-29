@@ -15,6 +15,7 @@
 <script>
 import { groq } from '@nuxtjs/sanity'
 export default {
+  name: 'Page',
   async asyncData ({ params, $sanity }) {
     const query = groq`*[_type == "project" && slug.current == "${params.slug}"][0]`
     const project = await $sanity.fetch(query)
