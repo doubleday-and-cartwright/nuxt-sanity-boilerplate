@@ -1,5 +1,5 @@
 export default {
-  name: 'aboutPage',
+  name: 'pageAbout',
   title: 'About Page',
   type: 'document',
   fields: [

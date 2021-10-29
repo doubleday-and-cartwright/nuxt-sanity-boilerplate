@@ -5,12 +5,12 @@
 <template>
   <div class="home">
     <h1 class="page-title">
-      Our Company
+      The Company
     </h1>
     <div class="logo">
       <div class="texture" />
       <h1>
-        OC
+        TC
       </h1>
     </div>
   </div>
@@ -29,7 +29,7 @@ export default {
   position: relative;
   width: 200px;
   height: 200px;
-  margin: 0 auto;
+  margin: $space-l auto;
 
   .texture {
     position: absolute;
