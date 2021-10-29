@@ -4,6 +4,7 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Documents
+import aboutPage from './documents/aboutPage'
 import project from './documents/project'
 // Objects
 import seo from './objects/seo'
@@ -14,6 +15,7 @@ export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
     /* Add new types here */
+    aboutPage,
     project,
     seo
   ]),

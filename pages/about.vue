@@ -1,6 +1,9 @@
 <template>
   <div class="about">
-    <h1 class="page-title">About our company</h1>
+    <h1 class="page-title">
+      About our company
+    </h1>
+    <p>{{ page.aboutText }}</p>
   </div>
 </template>
 
@@ -8,9 +11,9 @@
 import { groq } from '@nuxtjs/sanity'
 export default {
   async asyncData ({ $sanity }) {
-    const query = groq`*[_type == "employee"]`
-    const employees = await $sanity.fetch(query)
-    return { employees }
+    const query = groq`*[_type == "aboutPage"]`
+    const page = await $sanity.fetch(query)
+    return { page }
   }
 }
 </script>
