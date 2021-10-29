@@ -1,12 +1,14 @@
 <template>
   <footer>
-    &copy; The Company 2049
+    {{ footer.copy }}
   </footer>
 </template>
 
 <script>
 export default {
-
+  computed: {
+    footer () { return this.$store.state.siteSettings.footer }
+  }
 }
 </script>
 

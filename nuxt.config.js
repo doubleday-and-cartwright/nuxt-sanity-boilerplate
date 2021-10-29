@@ -5,15 +5,16 @@ export default {
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
+  // NOTE: Page specific head items can be defined via the head() method: https://nuxtjs.org/docs/components-glossary/head/
   head: {
-    title: 'nuxt-sanity-boilerplate',
+    title: 'The Company',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'This is the description of The Company.' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -23,6 +24,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/styles/global.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

@@ -1,6 +1,7 @@
 <!--
   Components that should appear globally (i.e. Site Navigation) should be placed here.
-  Note that it also imports the global.scss file to apply global styling.
+  Note that components do not need to be imported manually.
+  This is because "components: true" in nuxt.config.js means that components will be imported as needed.
 -->
 <template>
   <div class="site-content">
@@ -13,16 +14,16 @@
 </template>
 
 <script>
-import TheNavigation from '@/components/TheNavigation.vue'
-import TheFooter from '@/components/TheFooter.vue'
 export default {
-  components: {
-    TheNavigation,
-    TheFooter
+  // By loading global settings in nuxtServerInit and setting the title here,
+  // SEO friendly metadata can be populated.
+  head () {
+    return {
+      title: this.globalSettings.siteTitle
+    }
+  },
+  computed: {
+    globalSettings () { return this.$store.state.siteSettings.general }
   }
 }
 </script>
-
-<style lang="scss">
-@import '@/assets/styles/global.scss';
-</style>
