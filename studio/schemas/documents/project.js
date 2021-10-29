@@ -28,6 +28,12 @@ export default {
       name: 'description',
       title: 'Project Description',
       type: 'text'
+    },
+    // 'seo' is a custom type defined in schemas / objects
+    {
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo'
     }
   ]
 }

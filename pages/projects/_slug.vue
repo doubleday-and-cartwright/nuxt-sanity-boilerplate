@@ -19,6 +19,19 @@ export default {
     const query = groq`*[_type == "project" && slug.current == "${params.slug}"][0]`
     const project = await $sanity.fetch(query)
     return { project }
+  },
+  // By using the head() function, dynamic data can be passed to SEO related metadata
+  head () {
+    return {
+      title: this.project.seo ? this.project.seo.metaTitle : this.project.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.project.seo ? this.project.seo.metaDescription : this.project.description
+        }
+      ]
+    }
   }
 }
 </script>
