@@ -42,7 +42,8 @@ export default {
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
     '@nuxtjs/sanity/module',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxt/image'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -57,6 +58,12 @@ export default {
 
   sanity: {
     projectId: process.env.SANITY_PROJECT_ID
+  },
+
+  image: {
+    sanity: {
+      projectId: process.env.SANITY_PROJECT_ID
+    }
   },
 
   // New global variables and utilites must be added here.

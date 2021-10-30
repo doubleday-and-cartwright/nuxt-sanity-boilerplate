@@ -7,7 +7,11 @@
     <h1 class="page-title">
       {{ project.title }}
     </h1>
-    <img class="project__featured-image" :src="$urlFor(project.featuredImage)" :alt="project.title">
+    <img
+      class="project__featured-image"
+      :src="$urlFor(project.featuredImage)"
+      :alt="project.title"
+    >
     <p>{{ project.description }}</p>
   </div>
 </template>

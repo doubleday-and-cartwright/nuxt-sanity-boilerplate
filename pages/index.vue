@@ -8,7 +8,13 @@
       The Company
     </h1>
     <div class="logo">
-      <div class="texture" />
+      <!-- nuxt-img provides utilites for resizing images in the static directory -->
+      <nuxt-img
+        src="images/home-texture.jpg"
+        fit="cover"
+        class="texture"
+        width="200"
+      />
       <h1>
         TC
       </h1>
@@ -33,8 +39,6 @@ export default {
 
   .texture {
     position: absolute;
-    // Static images can be linked from the assets folder.
-    background-image: url('~assets/images/home-texture.jpg');
     transform: rotateZ(45deg);
     width: 100%;
     height: 100%;

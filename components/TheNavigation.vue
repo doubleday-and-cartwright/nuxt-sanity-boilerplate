@@ -25,6 +25,7 @@ export default {
     text-decoration: none;
     display: inline-block;
     padding: $space-s;
+    color: $font-color;
 
     &:visited {
       color: $font-color;

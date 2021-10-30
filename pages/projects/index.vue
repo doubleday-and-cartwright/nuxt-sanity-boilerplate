@@ -11,7 +11,7 @@
       <NuxtLink :to="`/projects/${project.slug.current}`">
         <div
           class="project-single__image"
-          :style="`background-image:url(${$urlFor(project.featuredImage)})`"
+          :style="`background-image:url(${$urlFor(project.featuredImage).height(500)})`"
         >
           <h2>{{ project.title }}</h2>
         </div>
