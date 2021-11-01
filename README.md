@@ -1,4 +1,4 @@
-# nuxt-sanity-boilerplate
+# Nuxt.js / Sanity / Vercel Boilerplate
 
 ## Build Setup
 
