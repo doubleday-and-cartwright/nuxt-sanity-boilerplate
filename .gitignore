@@ -71,6 +71,9 @@ typings/
 # Nuxt generate
 dist
 
+# Statically generated Sanity Studio
+static/studio
+
 # vuepress build output
 .vuepress/dist
 
