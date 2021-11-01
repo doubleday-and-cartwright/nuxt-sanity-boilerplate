@@ -23,9 +23,9 @@
     <div class="notes">
       <p>
         The Sanity CMS for this site can be accessed via
-        <NuxtLink to="/studio">
+        <strong>
           /studio
-        </NuxtLink>
+        </strong>
       </p>
       <br>
       <p>Whenever any data is updated in the CMS, a Sanity Webhook will cause the static site to be rebuilt and redeployed on Vercel. Updates may take a few minutes to appear on the live site.</p>
