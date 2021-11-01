@@ -1,7 +1,8 @@
 {
   "root": true,
   "project": {
-    "name": "Nuxt+Sanity Boilerplate"
+    "name": "Nuxt+Sanity Boilerplate",
+    "basePath": "/studio"
   },
   "api": {
     "projectId": "ldygmnbc",
