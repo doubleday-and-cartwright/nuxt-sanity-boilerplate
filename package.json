@@ -6,7 +6,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "echo 'Building Sanity to static/studio...' && npm install -g @sanity/cli && cd studio && npx sanity build ../static/studio -y && cd .. && nuxt generate",
+    "generate": "echo 'Building Sanity to static/studio...' && sudo npm install -g @sanity/cli && cd studio && npx sanity build ../static/studio -y && cd .. && nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
     "lint": "npm run lint:js && npm run lint:style",
