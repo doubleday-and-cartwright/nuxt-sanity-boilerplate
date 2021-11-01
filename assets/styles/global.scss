@@ -19,6 +19,7 @@ body {
 .container {
   max-width: $site-max-width;
   margin: 0 auto;
+  padding: 0 $space-s;
 }
 
 .page-title {
