@@ -23,7 +23,7 @@ export default {
     }
   },
   computed: {
-    globalSettings () { return this.$store.state.siteSettings.general }
+    globalSettings () { return this.$store.state.siteSettings.general || '' }
   }
 }
 </script>

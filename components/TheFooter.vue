@@ -7,7 +7,7 @@
 <script>
 export default {
   computed: {
-    footer () { return this.$store.state.siteSettings.footer }
+    footer () { return this.$store.state.siteSettings.footer || {} }
   }
 }
 </script>

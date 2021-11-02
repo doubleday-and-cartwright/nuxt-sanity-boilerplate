@@ -2,29 +2,98 @@
 
 ## Creating a New Project
 ### Git
+First, fork this repository to your preferred location, or use Import to make a copy: https://github.com/new/import
+
+Clone the new repository so you have a local copy.
 ```bash
-$ git clone https://github.com/doubleday-and-cartwright/nuxt-sanity-boilerplate.git
+$ git clone https://github.com/username/new-project.git
 ```
-Rename the repo folder, i.e. new-project.
+
+CD into the cloned repo and install dependencies.
 ```bash
 $ cd new-project
 $ npm install
 ```
 
-### Vercel
-Create a new project on https://vercel.com/
-
 ### Sanity
-Create a new Sanity project on sanity.io
+From the local project's root directory,
+```bash
+$ cd studio
+$ sanity init
+```
+Answer the prompts as follows:
 
-In API, add the following CORS origins:
-- http://localhost:3000
-- https://new-project.vercel.app
+The current folder contains a configured Sanity studio. Would you like to reconfigure it? __Yes__
+Select project to use __Create new project__
+Your project name: __[New Project Name Here]__
+Use the default dataset configuration? __Yes__
+
+To see the Sanity project ID, use
+```bash
+$ sanity projects list
+```
+or visit your Sanity dashboard at sanity.io
 
 Create an .env  file in the root directory, and include the following variable:
 ``
 SANITY_PROJECT_ID="your-sanity-id-here"
 ``
+
+From the Sanity dashboard, in API, add the following CORS origins, for local development:
+- http://localhost:3000
+
+### Vercel
+Make sure that the Vercel GitHub app is installed for your user or organization in Settings > Installed GitHub Apps, and that it has permission to access the repository created above.
+
+Create a new project on https://vercel.com/
+
+Import the git repository created above.
+
+Ensure the Framework Preset is Nuxt.js
+
+Override __Build & Development Settings > Build Command__: `npm run generate`
+
+In Environment Variables, add
+- Name: __SANITY_PROJECT_ID__
+- Value: __[your-sanity-id-here]__
+
+__Deploy__
+
+### Connecting Sanity & Vercel
+Now that the site is deployed on Vercel, add its URL to the list of allowed CORS origins on Sanity.
+
+Using webhooks, we can ensure that our static site built by nuxt generate will always be rebuilt whenever any CMS content is updated.
+#### Vercel
+Project > Settings > Git > Deploy Hooks
+
+Create Hook
+
+Name: __Sanity Update__
+Branch: __main__
+
+__Create Hook__
+
+Copy the generated URL for use in the steps below, i.e.
+https://api.vercel.com/v1/integrations/deploy/abc_xyzABcDEFGhiJkLmNOPQRS12345/abcdef34210
+
+#### Sanity
+Project > API > Webhooks > GROQ-powered Webhooks
+
+Create Webhook
+
+Name: __Rebuild Static Site__
+URL: __URL from above, i.e. https://api.vercel.com/v1/integrations/deploy/abc_xyzABcDEFGhiJkLmNOPQRS12345/abcdef34210__
+Dataset: __* (all datasets)__
+Trigger on: __Create Update Delete__
+
+Leave all others default
+
+__Save__
+
+### Testing
+To test the setup, modify a file, such as the home page, commit, and push.
+This should trigger a rebuild on Vercel, and changes should be reflected at the production URL after a few minutes.
+Try updating the CMS via http://localhost:3333 or https://new-project.vercel.app/studio. Updating the CMS should trigger a rebuild of the static site as well.
 
 ### Cleaning up
 Change the name attribute in package.json to new-project
@@ -49,7 +118,7 @@ $ npm run generate
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
-## Special Directories
+## Special Nuxt.js Directories
 
 You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
 

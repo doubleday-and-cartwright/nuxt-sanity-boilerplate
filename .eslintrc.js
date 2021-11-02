@@ -15,5 +15,10 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    // Need this for Nuxt as these names are part of the framework
+    'vue/multi-word-component-names': ['error', {
+      'ignores': ['default.vue', 'error.vue']
+    }]
+  }
 }
