@@ -1,5 +1,35 @@
 # Nuxt.js / Sanity / Vercel Boilerplate
 
+## Creating a New Project
+### Git
+```bash
+$ git clone https://github.com/doubleday-and-cartwright/nuxt-sanity-boilerplate.git
+```
+Rename the repo folder, i.e. new-project.
+```bash
+$ cd new-project
+$ npm install
+```
+
+### Vercel
+Create a new project on https://vercel.com/
+
+### Sanity
+Create a new Sanity project on sanity.io
+
+In API, add the following CORS origins:
+- http://localhost:3000
+- https://new-project.vercel.app
+
+Create an .env  file in the root directory, and include the following variable:
+``
+SANITY_PROJECT_ID="your-sanity-id-here"
+``
+
+### Cleaning up
+Change the name attribute in package.json to new-project
+
+:fire::fire::fire:Delete the instructions above from the README :fire::fire::fire:
 ## Build Setup
 
 ```bash
