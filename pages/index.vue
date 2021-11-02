@@ -5,7 +5,7 @@
 <template>
   <div class="home">
     <h1 class="page-title">
-      The Company
+      The Company !PR TEST!
     </h1>
     <div class="logo">
       <!-- nuxt-img provides utilites for resizing images in the static directory -->
@@ -18,17 +18,6 @@
       <h1>
         TC
       </h1>
-    </div>
-
-    <div class="notes">
-      <p>
-        The Sanity CMS for this site can be accessed via
-        <strong>
-          /studio
-        </strong>
-      </p>
-      <br>
-      <p>Whenever any data is updated in the CMS, a Sanity Webhook will cause the static site to be rebuilt and redeployed on Vercel. Updates may take a few minutes to appear on the live site.</p>
     </div>
   </div>
 </template>
