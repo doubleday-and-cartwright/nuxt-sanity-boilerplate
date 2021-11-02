@@ -23,9 +23,9 @@ $ sanity init
 ```
 Answer the prompts as follows:
 
-The current folder contains a configured Sanity studio. Would you like to reconfigure it? __Yes__
-Select project to use __Create new project__
-Your project name: __[New Project Name Here]__
+The current folder contains a configured Sanity studio. Would you like to reconfigure it? __Yes__  
+Select project to use __Create new project__  
+Your project name: __[New Project Name Here]__  
 Use the default dataset configuration? __Yes__
 
 To see the Sanity project ID, use
@@ -34,7 +34,7 @@ $ sanity projects list
 ```
 or visit your Sanity dashboard at sanity.io
 
-Create an .env  file in the root directory, and include the following variable:
+Create an .env  file in the root directory, and include the following variable:  
 ``
 SANITY_PROJECT_ID="your-sanity-id-here"
 ``
@@ -91,8 +91,8 @@ Leave all others default
 __Save__
 
 ### Testing
-To test the setup, modify a file, such as the home page, commit, and push.
-This should trigger a rebuild on Vercel, and changes should be reflected at the production URL after a few minutes.
+To test the setup, modify a file, such as the home page, commit, and push.  
+This should trigger a rebuild on Vercel, and changes should be reflected at the production URL after a few minutes.  
 Try updating the CMS via http://localhost:3333 or https://new-project.vercel.app/studio. Updating the CMS should trigger a rebuild of the static site as well.
 
 ### Cleaning up
