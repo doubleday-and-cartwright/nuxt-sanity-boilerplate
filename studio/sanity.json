@@ -1,12 +1,12 @@
 {
   "root": true,
+  "api": {
+    "projectId": "wyl2bjp0",
+    "dataset": "production"
+  },
   "project": {
     "name": "Nuxt+Sanity Boilerplate",
     "basePath": "/studio"
-  },
-  "api": {
-    "projectId": "ldygmnbc",
-    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",

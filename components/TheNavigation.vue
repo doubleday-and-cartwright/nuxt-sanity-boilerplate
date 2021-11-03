@@ -9,12 +9,15 @@
     <NuxtLink to="/projects">
       Projects
     </NuxtLink>
+    <NuxtLink to="/animation_1">
+      Animation Test
+    </NuxtLink>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Navigation'
+  name: 'NavigationBar'
 }
 </script>
 
