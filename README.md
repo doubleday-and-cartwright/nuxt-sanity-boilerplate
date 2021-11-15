@@ -1,5 +1,11 @@
 # Nuxt.js / Sanity / Vercel Boilerplate
 
+## Dependencies
+Install the Sanity CLI
+```bash
+$ npm install -g @sanity/cli
+```
+
 ## Creating a New Project
 ### Git
 First, fork this repository to your preferred location, or use Import to make a copy: https://github.com/new/import

@@ -35,7 +35,11 @@
 
 <script>
 export default {
-  name: 'Home'
+  name: 'HomePage',
+  mounted () {
+    console.log('Mounted.')
+    this.$axios.post('./api/message', { message: 'Hi there.' })
+  }
 }
 </script>
 

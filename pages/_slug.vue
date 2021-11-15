@@ -15,6 +15,7 @@
 <script>
 import { groq } from '@nuxtjs/sanity'
 export default {
+  name: 'AboutPage',
   // Get page data specific to the current page slug.
   async asyncData ({ params, $sanity, error }) {
     const query = groq`*[_type == "page" && slug.current == "${params.slug}"][0]`
