@@ -8,7 +8,11 @@ $ npm install -g @sanity/cli
 
 ## Creating a New Project
 ### Git
-First, fork this repository to your preferred location, or use Import to make a copy: https://github.com/new/import
+Before making a copy of the repository, check for and resolve any automated PRs.
+
+**Note:** Some PRs updates may be associated with Nuxt 3 compatibility. **Nuxt 3 is still in beta** so those updates should be ignored, for now.
+
+Once any existing PRs have been merged, fork this repository to your preferred location, or use Import to make a copy: https://github.com/new/import
 
 Clone the new repository so you have a local copy.
 ```bash
