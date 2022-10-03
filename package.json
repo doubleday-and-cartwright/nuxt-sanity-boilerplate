@@ -19,7 +19,7 @@
     "@nuxtjs/sanity": "^0.10.0",
     "@sanity/client": "^3.3.0",
     "@sanity/image-url": "^1.0.1",
-    "core-js": "^3.21.1",
+    "core-js": "^3.25.4",
     "nuxt": "^2.15.7"
   },
   "devDependencies": {
